@@ -12,8 +12,15 @@ def bilgi():
     return '<p>' + random.choice(bilgiler) + '</p>'
 app.run(debug=True)
 
-@app.route("/secret")
-def secret_page():
-  return "Burası gizli sayfa!"
-if __name__ == "__main__":
-app.run(debug=True)
+
+@app.route("/meme")
+def rastgele_meme():
+  meme_listesi =[
+    "memes1.jpg"
+    "memes2.jpg"
+    "memes3.jpg"
+  ] 
+
+
+  secilen_meme = random.choice(meme_listesi)
+  return f'<p><img src="{secilen_meme}" width="400"></p>'
