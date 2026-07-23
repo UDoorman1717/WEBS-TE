@@ -12,8 +12,8 @@ def bilgi():
     return '<p>' + random.choice(bilgiler) + '</p>'
 app.run(debug=True)
 
-@app.route("/secrets")
-def secret():
-    secrets = ["SECRET:Eğer / ın yanına *bilgiler* yazarsan yeni bilgiler öğrenebilirsin!", "SECRET:Bu sayfa 13 yaşındaki biri tarafından tasarlandı!", "SECRET:buna yazacak secret bulamadım :D"]
-    return '<p>' + random.choice(secrets) + '</p>'
+@app.route("/secret")
+def secret_page():
+  return "Burası gizli sayfa!"
+if __name__ == "__main__":
 app.run(debug=True)
